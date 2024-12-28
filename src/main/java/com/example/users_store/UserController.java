@@ -1,4 +1,4 @@
-package com.example.books_store;
+package com.example.users_store;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
