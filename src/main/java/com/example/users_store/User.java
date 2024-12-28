@@ -4,16 +4,10 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+
 
 @Entity
-@Getter
-@Setter
-@AllArgsConstructor
-@NoArgsConstructor
+
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -28,6 +22,57 @@ public class User {
         this.name = name;
         this.phoneNumber = phoneNumber;
         this.address = address;
+        this.yearBirth = yearBirth;
+    }
+
+    public User(Long id, String name, String phoneNumber, String address, int yearBirth) {
+        this.id = id;
+        this.name = name;
+        this.phoneNumber = phoneNumber;
+        this.address = address;
+        this.yearBirth = yearBirth;
+    }
+
+    public User() {
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public int getYearBirth() {
+        return yearBirth;
+    }
+
+    public void setYearBirth(int yearBirth) {
         this.yearBirth = yearBirth;
     }
 }

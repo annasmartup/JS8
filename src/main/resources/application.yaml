@@ -11,3 +11,11 @@ spring:
     properties:
       hibernate:
         dialect: org.hibernate.dialect.MySQL8Dialect
+
+logging:
+  file:
+    name: app-log.txt
+  level:
+    com:
+      example:
+        users_store: INFO
